@@ -2,11 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>MyPage</title>
+	<meta name="description" content="to be completed">
+	<meta name="keywords" content="to be completed">
+	<meta name="author" content="to be completed">
+
+	<style>
+        .iframe-container {
+            border: 1px solid #000;
+            width: 100%;
+            height: 80vh; /* You can adjust this value as needed */
+            margin-top: 20px;
+            position: relative;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+	
+	<!-- Morris Charts CSS -->
+    <link href="static/css/morris.css" rel="stylesheet" type="text/css">
+	
+	<!-- Data table CSS -->
+	<link href="static/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	
+	<link href="static/css/jquery.toast.min.css" rel="stylesheet" type="text/css">
+	
+	<!-- Custom CSS -->
+	<link href="static/css/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    <h1>Welcome to the GitHub Page: continuum-supply-chain-modelling</h1>
-    <p>This is my personal website hosted on GitHub Pages!</p>
+	<!-- Preloader -->
+	<div class="preloader-it">
+		<div class="la-anim-1"></div>
+	</div>
+	<!-- /Preloader -->
+    <div class="wrapper">
+			<!-- Top Menu Items -->
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block mr-20 pull-left" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+			</nav>
+			<!-- /Top Menu Items -->
+			
+			<!-- Left Sidebar Menu -->
+			<div class="fixed-sidebar-left">
+				<ul class="nav navbar-nav side-nav nicescroll-bar">
+					<li>
+						<a class="active" href="#" id="loadPage1"><i class="icon-doc mr-10"></i>3D Flux</a>
+				    </li>
+
+					<li>
+						<a class="active" href="#" id="loadPage2"><i class="icon-doc mr-10"></i>3D Density</a>
+				    </li>
+
+				</ul>
+			</div>
+			<!-- /Left Sidebar Menu -->
+
+
+        <!-- Main Content -->
+
+		<div class="page-wrapper">
+			<div class="iframe-container">
+				<iframe id="contentFrame" src="display_html/loading.html"></iframe>
+			</div>
+
+			<!-- Footer -->
+			<footer class="footer container-fluid pl-30 pr-30">
+				<div class="row">
+					<div class="col-sm-7 text-right">
+						<p>Copyright &copy; 2024. Delft University of Technology.<a target="_blank" href="https:google.com">xhy</a></p>
+					</div>
+				</div>
+			</footer>
+			<!-- /Footer -->
+			
+		</div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /#wrapper -->
+	
+	<!-- JavaScript -->
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+	<!-- Data table JavaScript -->
+	<script src="static/js/jquery.dataTables.min.js"></script>
+
+	<!-- Slimscroll JavaScript -->
+	<script src="static/js/jquery.slimscroll.js"></script>
+
+	<!-- simpleWeather JavaScript -->
+	<script src="static/js/moment.min.js"></script>
+	<!--<script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>-->
+	<!--<script src="dist/js/simpleweather-data.js"></script>-->
+
+	<!-- Progressbar Animation JavaScript -->
+	<script src="static/js/jquery.waypoints.min.js"></script>
+	<script src="static/js/jquery.counterup.min.js"></script>
+
+	<!-- Fancy Dropdown JS -->
+	<script src="static/js/dropdown-bootstrap-extended.js"></script>
+
+	<!-- Sparkline JavaScript -->
+	<script src="static/js/jquery.sparkline.min.js"></script>
+
+	<!-- ChartJS JavaScript -->
+	<script src="static/js/Chart.min.js"></script>
+
+	<!-- Morris Charts JavaScript -->
+    <script src="static/js/raphael.min.js"></script>
+    <script src="static/js/morris.min.js"></script>
+    <script src="static/js/morris-data.js"></script>
+
+	<script src="static/js/jquery.toast.min.js"></script>
+
+	<!-- Init JavaScript -->
+	<script src="static/js/init.js"></script>
+<!--	<script src="static/js/dashboard-data.js"></script>-->
+
+	<script>
+    document.getElementById('loadPage1').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('contentFrame').src = 'display_html/3D Flux f.html';
+    });
+
+    document.getElementById('loadPage2').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('contentFrame').src = 'display_html/3D_Log10_Rho.html';
+    });
+
+
+</script>
+	
 </body>
+
 </html>
