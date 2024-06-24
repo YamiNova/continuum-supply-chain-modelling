@@ -3,12 +3,26 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<title>MyPage</title>
+	<title>Supply Chain Modelling Page</title>
 	<meta name="description" content="to be completed">
 	<meta name="keywords" content="to be completed">
 	<meta name="author" content="to be completed">
 
 	<style>
+		#progress-bar-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        #progress-bar {
+            width: 0%;
+            height: 5px;
+            background-color: #4caf50;
+        }
+        
         .iframe-container {
             border: 1px solid #000;
             width: 100%;
@@ -47,7 +61,8 @@
     <div class="wrapper">
 			<!-- Top Menu Items -->
 			<nav class="navbar navbar-inverse navbar-fixed-top">
-				<a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block mr-20 pull-left" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+				<a id="toggle_nav_btn" class="toggle-left-nav-btn inline-block mr-20 pull-left" href="javascript:void(0);"> <i class="fa fa-bars"></i></a>
+				<h1 style="font-size: 16px;"> Click the left list to browse. Please wait for some time before the page loaded.</h1>
 			</nav>
 			<!-- /Top Menu Items -->
 			
@@ -62,6 +77,18 @@
 						<a class="active" href="#" id="loadPage2"><i class="icon-doc mr-10"></i>3D Density</a>
 				    </li>
 
+					<li>
+						<a class="active" href="#" id="loadPage3"><i class="icon-doc mr-10"></i>Arrive Time Bar</a>
+				    </li>
+
+					<li>
+						<a class="active" href="#" id="loadPage4"><i class="icon-doc mr-10"></i>Optimization 2 Suppliers</a>
+				    </li>
+
+					<li>
+						<a class="active" href="#" id="loadPage5"><i class="icon-doc mr-10"></i>Optimization 3 Suppliers</a>
+				    </li>
+
 				</ul>
 			</div>
 			<!-- /Left Sidebar Menu -->
@@ -70,15 +97,16 @@
         <!-- Main Content -->
 
 		<div class="page-wrapper">
+
 			<div class="iframe-container">
-				<iframe id="contentFrame" src="display_html/loading.html"></iframe>
+				<iframe id="contentFrame" src="display_html/3D Flux f.html"></iframe>
 			</div>
 
 			<!-- Footer -->
 			<footer class="footer container-fluid pl-30 pr-30">
 				<div class="row">
 					<div class="col-sm-7 text-right">
-						<p>Copyright &copy; 2024. Delft University of Technology.<a target="_blank" href="https:google.com">xhy</a></p>
+						<p>Copyright &copy; 2024. Delft University of Technology.<a target="_blank" href="https:google.com"> Supply Chain Modelling Group</a></p>
 					</div>
 				</div>
 			</footer>
@@ -142,6 +170,21 @@
     document.getElementById('loadPage2').addEventListener('click', function(event) {
         event.preventDefault();
         document.getElementById('contentFrame').src = 'display_html/3D_Log10_Rho.html';
+    });
+
+    document.getElementById('loadPage3').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('contentFrame').src = 'display_html/arrive_time_bar.html';
+    });
+
+    document.getElementById('loadPage4').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('contentFrame').src = 'display_html/hold_cost of 2 suppliers [15, 10].html';
+    });
+
+    document.getElementById('loadPage5').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('contentFrame').src = 'display_html/3D Maintenance cost in miu Coordinates [12, 16, 8].html';
     });
 
 
